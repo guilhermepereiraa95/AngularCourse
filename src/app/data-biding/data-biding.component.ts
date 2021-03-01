@@ -16,8 +16,7 @@ export class DataBidingComponent implements OnInit {
   valorAtual: any = '';
   valorSalvo: string = '';
   mouseOver: boolean = false;
-  valor: string = 'abc';
-  
+
 
   public getValor(){
     return 1;
