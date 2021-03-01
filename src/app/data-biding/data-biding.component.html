@@ -1,0 +1,95 @@
+
+<!--
+{{ url }}
+
+
+<p>Resultado de 1+1: {{ 1+1 }}</p>
+<p>Resultado de 1+1 não é :  {{ 1 + 1 + getValor() }}</p>
+<p>Curso Angular e gosto do curso: {{ cursoAngular && getCurtirCurso() }}</p>
+<article>
+    <p>Interpolação</p><img src="{{ urlImagem }}">
+    <p>Property biding:</p><img [src]="urlImagem">
+    <p>Property biding formato padrão: </p><img bind-src="urlImagem">
+</article>
+-->
+<!--
+<article>
+    <p>Class e Style Biding</p>
+    <div>
+    <select #classe (change)="0">
+        <option value="alert-success">Sucesso</option>
+        <option value="alert-warning">Alerta</option>
+        <option value="alert-info">Info</option>
+        <option value="alert-danger">Erro</option>
+    </select>
+    </div>
+    <br>
+
+    <div class="alert" class="{{ classe.value }}">Texto do valor do select</div>
+
+    <div class="alert"
+    [class.alert-success]="classe.value == 'alert-success'">Sucesso</div>    
+    <div class="alert"
+    [class.alert-info]="classe.value == 'alert-info'">Info</div>    
+    <div class="alert"
+    [class.alert-warning]="classe.value == 'alert-warning'">Alerta</div>    
+    <div class="alert"
+    [class.alert-danger]="classe.value == 'alert-danger'">Erro</div>
+
+    <div class="alert alert-danger"
+    [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">ERRO! A helena esquenta o alface no microondas.</div>
+    
+</article>
+-->
+
+<!--
+<article>
+    <h3>Event biding</h3>
+    <button class="btn btn-primary"
+    (click)="botaoClick()">Clique aqui</button>
+
+    <br>
+
+    <input type="text" 
+    (keyup)="onKeyUp($event)"
+    (keyup.enter)="salvarValor(campoInput.value)"
+    (blur)="salvarValor(campoInput.value)"
+    #campoInput />
+
+    <p>Valor atual: {{ valorAtual }}</p>
+
+    <p>Valor atual: {{ valorSalvo }}</p>
+
+    <br>
+
+    <p
+    (mouseover)="isMouseOver()"
+    (mouseoverout)="isMouseOver()"
+    [class.highlight]="mouseOver">Passe o mouse sobre mim</p>
+    
+
+</article>
+
+-->
+
+<article>
+    <p>Two way data biding</p>
+
+    <input type="text"
+    [value]="valor"
+    (input)="valor = $any($event.target).value"  />
+
+    <input type="text"
+    [ngModel]="valor"
+    (ngModelChange)="valor = $any($event.target).value"  />
+
+    <input type="text"
+    [(ngModel)]="valor"
+    />
+
+    <input type="text"
+    bindon-ngModel="valor"
+    />
+
+    <p>Você digitou: {{ valor }}</p>
+</article>
