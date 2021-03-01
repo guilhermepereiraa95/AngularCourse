@@ -70,26 +70,4 @@
 
 </article>
 
--->
-
-<article>
-    <p>Two way data biding</p>
-
-    <input type="text"
-    [value]="valor"
-    (input)="valor = $any($event.target).value"  />
-
-    <input type="text"
-    [ngModel]="valor"
-    (ngModelChange)="valor = $any($event.target).value"  />
-
-    <input type="text"
-    [(ngModel)]="valor"
-    />
-
-    <input type="text"
-    bindon-ngModel="valor"
-    />
-
-    <p>Você digitou: {{ valor }}</p>
-</article>
+--><app-meu-form></app-meu-form>

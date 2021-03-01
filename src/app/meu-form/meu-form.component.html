@@ -1,0 +1,40 @@
+<article>
+    <p>Two way data biding</p>
+    <br> 
+    <div class="container">
+        
+    <span>Property and Event biding</span>
+
+    <input type="text"
+    [value]="valor"
+    (input)="valor = $any($event.target).value"  />
+        <br>
+    <span>Property and Event biding using NgModel from Form Module</span>
+        
+    <input type="text"
+    [ngModel]="valor"
+    (ngModelChange)="valor = $any($event)"  />
+    <br>
+    <span>Property and Event biding (banana in a box sintax) NgModel from Form Module</span>
+    <input type="text"
+    [(ngModel)]="valor"
+    />
+    <br>
+    <span>Property and Event biding (bind on ngModel) NgModel from Form Module</span>
+    <input type="text"
+    bindon-ngModel="valor"
+    />
+    <br>
+    <p>Você digitou: {{ valor }}</p>
+
+    <input type="text"
+    [(ngModel)]="pessoa.nome"
+    />
+
+    <input type="text"
+    [(ngModel)]="pessoa.idade"
+    />
+
+    <p>Seu nome é {{ pessoa.nome }} e a sua idade é: {{ pessoa.idade }}</p>
+    </div>
+</article>
