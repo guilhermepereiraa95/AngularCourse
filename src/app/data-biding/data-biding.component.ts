@@ -16,6 +16,12 @@ export class DataBidingComponent implements OnInit {
   valorAtual: any = '';
   valorSalvo: string = '';
   mouseOver: boolean = false;
+  nomeCurso: string = 'Angular';
+  valorInicial: number = 15;
+
+  onMudouValor(evento: any){
+    console.log(evento);
+  }
 
 
   public getValor(){

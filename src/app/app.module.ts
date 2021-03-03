@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DataBidingComponent } from './data-biding/data-biding.component';
 import { MeuFormComponent } from './meu-form/meu-form.component';
+import { InputPropertiesComponent } from './input-properties/input-properties.component';
+import { OutputPropertiesComponent } from './output-properties/output-properties.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataBidingComponent,
-    MeuFormComponent
+    MeuFormComponent,
+    InputPropertiesComponent,
+    OutputPropertiesComponent
   ],
   imports: [
     BrowserModule,

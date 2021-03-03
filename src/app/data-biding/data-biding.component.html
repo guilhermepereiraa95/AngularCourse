@@ -70,4 +70,17 @@
 
 </article>
 
---><app-meu-form></app-meu-form>
+<app-meu-form></app-meu-form>-->
+
+<section class="input-output-properties">
+    <article>
+        <h3>Input Output Properties</h3>
+
+
+        <app-input-properties [nome]="nomeCurso"></app-input-properties>
+
+
+        <app-output-properties [valor]="valorInicial"
+        (mudouValor)="onMudouValor($event)"></app-output-properties>
+    </article>
+</section>
