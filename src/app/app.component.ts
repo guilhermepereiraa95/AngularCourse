@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'data-biding';
+  mudarValor(){
+    this.valor++;
+  }
+
+  valor: number = 5;
+  deletarCiclo: boolean = false;
+  
+  destruirCiclo(){
+    this.deletarCiclo = true;
+  }
+
 }
