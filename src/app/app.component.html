@@ -1,7 +1,8 @@
 <section>
   <article>
-    <p>Data biding class: <app-data-biding></app-data-biding> </p>
-    
+    <p>Data biding class: <!--<app-data-biding></app-data-biding>--> <app-ciclo *ngIf="!deletarCiclo" [valorInicial]="valor"></app-ciclo> </p>
+    <button (click)="mudarValor()">Mudar Valor</button>
+    <button (click)="destruirCiclo()">Deletar</button>
   </article>
 </section>
 
